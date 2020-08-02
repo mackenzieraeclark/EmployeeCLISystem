@@ -114,29 +114,29 @@ async function loadPrompts() {
 
 // Create all needed functions within prompts!!
 
-viewEmployees();
+async function viewEmployees();
 
-viewByDepartment();
+async function viewByDepartment();
 
-viewByManager();
+async function viewByManager();
 
-addEmployee();
+async function addEmployee();
 
-removeEmployee();
+async function removeEmployee();
 
-updateRole();
+async function updateRole();
 
-viewDepartments();
+async function viewDepartments();
 
-addDepartment();
+async function addDepartment();
 
-removeDepartment();
+async function removeDepartment();
 
-viewRoles();
+async function viewRoles();
 
-addRole();
+async function addRole();
 
-removeRole();
+async function removeRole();
 
 function quit() {
     console.log("We hope we were able to help simplify your employee management. Come back soon!")
