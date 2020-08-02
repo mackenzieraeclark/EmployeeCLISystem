@@ -22,5 +22,13 @@ class DB {
         );
     }
 
+    // In order to find the MANAGER, isolate by ID
+    allPossibleManagers(employeeID) {
+        return.this.connection.query(
+            "SELECT id, first_name, last_name FROM employee WHERE id != ?",
+            employeeID
+        );
+    }
+
 
 } // End Functions
