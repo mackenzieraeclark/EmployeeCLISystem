@@ -22,6 +22,15 @@ class DB {
         );
     }
 
+    // View Employees by Department
+    // This will join with roles to display role titles
+    byDepartment(departmentId) {
+        return this.connection.query(
+        "SELECT employee.id, employee.first_name, employee.last_name, role.title FROM employee LEFT JOIN role on employee.role_id = role.id LEFT JOIN department department on role.department_id = department.id WHERE department.id = ?;",
+        departmentId
+        );
+    }
+
     // In order to find the MANAGER, isolate by ID
     allPossibleManagers(employeeID) {
         return this.connection.query(

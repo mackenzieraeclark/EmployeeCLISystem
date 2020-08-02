@@ -122,7 +122,30 @@ async function viewEmployees() {
     loadPrompts();
 }
 
-async function viewByDepartment();
+async function viewByDepartment() {
+  const departments = await db.byDepartment();
+
+  const departmentChoices = departments.map(({ id, name }) => ({
+    name: name,
+    value: id
+  }));
+
+  const { departmentId } = await prompt([
+    {
+      type: "list",
+      name: "departmentId",
+      message: "Which department would you like to see employees for?",
+      choices: departmentChoices
+    }
+  ]);
+
+  const employees = await db.findAllEmployeesByDepartment(departmentId);
+
+  console.log("\n");
+  console.table(employees);
+
+  loadMainPrompts();
+}
 
 async function viewByManager();
 
