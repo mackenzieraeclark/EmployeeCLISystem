@@ -80,6 +80,36 @@ async function loadPrompts() {
     ]);
 
     // Create Switch Cases to direct to the correct function based on what user has chose:
+    switch (choice) {
+        case "VIEW_EMPLOYEES":
+          return viewEmployees();
+        case "VIEW_BY_DEPARTMENT":
+          return viewByDepartment();
+        case "VIEW_BY_MANAGER":
+          return viewByManager();
+        case "ADD_EMPLOYEE":
+          return addEmployee();
+        case "REMOVE_EMPLOYEE":
+          return removeEmployee();
+        case "UPDATE_ROLE":
+          return updateRole();
+        case "UPDATE_MANAGER":
+          return updateManager();
+        case "VIEW_DEPARTMENTS":
+          return viewDepartments();
+        case "ADD_DEPARTMENT":
+          return addDepartment();
+        case "REMOVE_DEPARTMENT":
+          return removeDepartment();
+        case "VIEW_ROLES":
+          return viewRoles();
+        case "ADD_ROLE":
+          return addRole();
+        case "REMOVE_ROLE":
+          return removeRole();
+        default:
+          return quit();
+      }
 }
 
 
