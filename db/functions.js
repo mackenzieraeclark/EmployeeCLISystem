@@ -24,10 +24,15 @@ class DB {
 
     // In order to find the MANAGER, isolate by ID
     allPossibleManagers(employeeID) {
-        return.this.connection.query(
+        return this.connection.query(
             "SELECT id, first_name, last_name FROM employee WHERE id != ?",
             employeeID
         );
+    }
+
+    // Create a new employee
+    createEmployee(employee) {
+        return this.connection.query("INSERT INTO employee SET ?", employee);
     }
 
 

@@ -114,7 +114,13 @@ async function loadPrompts() {
 
 // Create all needed functions within prompts!!
 
-async function viewEmployees();
+async function viewEmployees() {
+    const employees = await db.allEmployees();
+    console.log("\n");
+    console.table(employees);
+
+    loadPrompts();
+}
 
 async function viewByDepartment();
 
