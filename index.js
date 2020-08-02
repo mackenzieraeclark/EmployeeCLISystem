@@ -112,6 +112,31 @@ async function loadPrompts() {
       }
 }
 
+// Create all needed functions within prompts!!
+
+viewEmployees();
+
+viewByDepartment();
+
+viewByManager();
+
+addEmployee();
+
+removeEmployee();
+
+updateRole();
+
+viewDepartments();
+
+addDepartment();
+
+removeDepartment();
+
+viewRoles();
+
+addRole();
+
+removeRole();
 
 // Begin!
 init();
