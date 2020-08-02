@@ -138,5 +138,10 @@ addRole();
 
 removeRole();
 
+function quit() {
+    console.log("We hope we were able to help simplify your employee management. Come back soon!")
+    process.exit();
+}
+
 // Begin!
 init();
