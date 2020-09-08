@@ -31,6 +31,7 @@ class DB {
         );
     }
 
+    // View Employees by Manager
     // In order to find the MANAGER, isolate by ID
     allPossibleManagers(employeeID) {
         return this.connection.query(
@@ -43,6 +44,26 @@ class DB {
     createEmployee(employee) {
         return this.connection.query("INSERT INTO employee SET ?", employee);
     }
+
+    // Remove an existing employee
+
+    // Update an existing role
+
+    // Update an existing Manager
+
+    // View all roles
+
+    // Add a new role
+
+    // Remove a role
+
+    // View all departments
+
+    // Add a department
+
+    // Remove a department
+
+    // Quit
 
 
 } // End Functions
