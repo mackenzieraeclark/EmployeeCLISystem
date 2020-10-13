@@ -127,3 +127,6 @@ class DB {
 
 
 } // End Functions
+
+//export
+module.exports = new DB(connection);
