@@ -36,8 +36,8 @@ async function loadPrompts() {
                     value: "ADD_EMPLOYEE"
                 },
                 {
-                    name: "Remove An Employee",
-                    value: "REMOVE_EMPLOYEE"
+                    name: "Delete An Employee",
+                    value: "DELETE_EMPLOYEE"
                 },
                 {
                     name: "Update A Role",
@@ -56,8 +56,8 @@ async function loadPrompts() {
                     value: "ADD_ROLE"
                 },
                 {
-                    name: "Remove Role",
-                    value: "REMOVE_ROLE"
+                    name: "Delete Role",
+                    value: "DELETE_ROLE"
                 },
                 {
                     name: "View All Departments",
@@ -68,8 +68,8 @@ async function loadPrompts() {
                     value: "ADD_DEPARTMENT"
                 },
                 {
-                    name: "Remove Department",
-                    value: "REMOVE_DEPARTMENT"
+                    name: "Delete Department",
+                    value: "DELETE_DEPARTMENT"
                 },
                 {
                     name: "Quit",
@@ -89,8 +89,8 @@ async function loadPrompts() {
           return viewByManager();
         case "ADD_EMPLOYEE":
           return addEmployee();
-        case "REMOVE_EMPLOYEE":
-          return removeEmployee();
+        case "DELETE_EMPLOYEE":
+          return deleteEmployee();
         case "UPDATE_ROLE":
           return updateRole();
         case "UPDATE_MANAGER":
@@ -99,14 +99,14 @@ async function loadPrompts() {
           return viewDepartments();
         case "ADD_DEPARTMENT":
           return addDepartment();
-        case "REMOVE_DEPARTMENT":
-          return removeDepartment();
+        case "DELETE_DEPARTMENT":
+          return deleteDepartment();
         case "VIEW_ROLES":
           return viewRoles();
         case "ADD_ROLE":
           return addRole();
-        case "REMOVE_ROLE":
-          return removeRole();
+        case "DELETE_ROLE":
+          return deleteRole();
         default:
           return quit();
       }
