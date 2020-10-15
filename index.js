@@ -1,12 +1,16 @@
 // Set requirements
 const { prompt } = require("inquirer");
+const logo = require("asciiart-logo");
 const db = require("./db");
 require("console.table");
 
 // Initialize Application
 function init() {
-    console.log("Welcome to your employee management CLI system!")
-    loadPrompts();
+  const logoText = logo({ name: "Employee Manager" }).render();
+
+  console.log(logoText);
+
+  loadPrompts();
 }
 
 // Create Main Function for Prompting User
@@ -21,7 +25,7 @@ async function loadPrompts() {
             choices: [
                 {
                     name: "View All Employees",
-                    value: "VIEW_EMPLOYESS"
+                    value: "VIEW_EMPLOYEES"
                 },
                 {
                     name: "View Employees by Department",
@@ -125,7 +129,7 @@ async function viewEmployees() {
     console.table(employees);
 
     loadPrompts();
-}
+};
 
 // all departments
 
@@ -411,8 +415,6 @@ async function updateManager() {
 
   loadPrompts();
 };
-
-//
 
 
 
