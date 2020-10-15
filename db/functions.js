@@ -70,24 +70,24 @@ class DB {
 // ADD FUNCTIONS
 
     // Add a new employee
-    addEmployee(employee) {
+    makeEmployee(employee) {
         return this.connection.query("INSERT INTO employee SET ?", employee);
     }
 
     // Add a new role
-    addRole(role) {
+    makeRole(role) {
         return this.connection.query("INSERT INTO role SET ?", role);
       }
 
     // Add a department
-    addDepartment(department) {
+    makeDepartment(department) {
         return this.connection.query("INSERT INTO department SET ?", department);
       }
 
 // EDIT FUNTIONS
 
     // Update their role
-    updateRole(employeeId, roleId) {
+    manageRole(employeeId, roleId) {
         return this.connection.query(
           "UPDATE employee SET role_id = ? WHERE id = ?",
           [roleId, employeeId]
@@ -95,7 +95,7 @@ class DB {
       }
 
     // Update who is their Manager
-    updateManager(employeeId, managerId) {
+    manageManager(employeeId, managerId) {
         return this.connection.query(
           "UPDATE employee SET manager_id = ? WHERE id = ?",
           [managerId, employeeId]
@@ -105,7 +105,7 @@ class DB {
 // DELETE FUNCTIONS
 
     // Delete an existing employee
-    deleteEmployee(employeeId) {
+    removeEmployee(employeeId) {
         return this.connection.query(
           "DELETE FROM employee WHERE id = ?",
           employeeId
@@ -113,12 +113,12 @@ class DB {
       }
 
     // Delete a role
-    deleteRole(roleId) {
+    removeRole(roleId) {
         return this.connection.query("DELETE FROM role WHERE id = ?", roleId);
       }
 
     // Delete a department
-    deleteDepartment(departmentId) {
+    removeDepartment(departmentId) {
         return this.connection.query(
           "DELETE FROM department WHERE id = ?",
           departmentId
